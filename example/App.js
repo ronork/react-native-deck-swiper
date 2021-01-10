@@ -23,12 +23,14 @@ export default class Exemple extends Component {
   renderCard = (card, index) => {
     return (
       <View style={styles.card}>
-        <Text style={styles.text}>{card} - {index}</Text>
+        <Text style={styles.text}>
+          {card} - {index}
+        </Text>
       </View>
     )
-  };
+  }
 
-  onSwiped = (type) => {
+  onSwiped = type => {
     console.log(`on swiped ${type}`)
   }
 
@@ -36,11 +38,11 @@ export default class Exemple extends Component {
     this.setState({
       swipedAllCards: true
     })
-  };
+  }
 
   swipeLeft = () => {
     this.swiper.swipeLeft()
-  };
+  }
 
   render () {
     return (
